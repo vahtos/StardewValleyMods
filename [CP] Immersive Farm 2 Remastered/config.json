@@ -1,0 +1,17 @@
+{
+  "DirtCropField1": "false",
+  "DirtCropField2": "false",
+  "DirtCropField3": "false",
+  "DirtCropField4": "false",
+  "DirtCropField5": "false",
+  "DirtCropField6": "false",
+  "RemoveShed": "false",
+  "RemoveFencesInFrontOfShed": "false",
+  "RemoveFarmAnimalAreaFences": "false",
+  "RemoveFencesLeftOfCropField1": "false",
+  "RemoveFencesFromBackyard": "false",
+  "RemoveTableFromBackyard": "false",
+  "RemovePetHouseFromBackyard": "false",
+  "RemoveFlowerbedFromBackyard": "false",
+  "FarmSandboxLayout-AllOtherConfigurationsMustBeFalse": "false"
+}
