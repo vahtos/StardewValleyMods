@@ -71,7 +71,7 @@
       "Enable": true
     },
     "Slingshot": {
-      "Enable": false
+      "Enable": true
     },
     "WateringCan": {
       "Enable": true
