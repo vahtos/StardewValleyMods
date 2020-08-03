@@ -1,9 +1,9 @@
 {
-  "DefaultTickLength": 7.0,
+  "DefaultTickLength": 9.0,
   "TickLengthByLocation": {
-    "Indoors": 7.0,
-    "Outdoors": 7.0,
-    "Mine": 7.0
+    "Indoors": 9.0,
+    "Outdoors": 9.0,
+    "Mine": 9.0
   },
   "EnableOnFestivalDays": false,
   "FreezeTimeAt": null,
