@@ -22,3 +22,8 @@ This assumes you have never installed mods before and need to create the Mods fo
 6. Copy the shortcut `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods\StardewValleyModded.lnk` to Desktop.
 
 Double click `StardewValleyModded.lnk` to run with mods.
+
+## To Update
+1. Reinstall [SMAPI](https://smapi.io/) (if there is a new version)
+2. Open Powershell
+3. `cd "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods" && git pull`
