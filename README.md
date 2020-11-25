@@ -18,7 +18,7 @@ This assumes you have never installed mods before and need to create the Mods fo
 3. Enter: `mkdir "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods" & cd "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods"`
 (you will get an error if this folder already exists, it doesn't matter)
 4. Enter: `git clone https://github.com/vahtos/StardewValleyMods.git .`
-5. Install [SMAPI](https://smapi.io/), I included it, you can just enter `.\SMAPI 3.7.6 installer\install on Windows.bat` and follow prompts.
+5. Install [SMAPI](https://smapi.io/)
 6. Copy the shortcut `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods\StardewValleyModded.lnk` to Desktop.
 
 Double click `StardewValleyModded.lnk` to run with mods.

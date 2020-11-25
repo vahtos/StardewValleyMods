@@ -1,0 +1,21 @@
+{
+  "FarmSandboxLayout": "false",
+  "Farm-LightDebris": "false",
+  "DirtCropField1": "false",
+  "DirtCropField2": "false",
+  "DirtCropField3": "false",
+  "DirtCropField4": "false",
+  "DirtCropField5": "false",
+  "DirtCropField6": "false",
+  "RemoveFencesInFrontOfShed": "false",
+  "RemoveFarmAnimalAreaFences": "false",
+  "RemoveFencesLeftOfCropField1": "false",
+  "RemoveCentralCherryBlossomTreeAndWaterTrough": "false",
+  "RemoveTableFromBackyard": "false",
+  "RemoveFencesFromBackyard": "false",
+  "RemovePetHouseFromBackyard": "false",
+  "RemoveFlowerbedFromBackyard": "false",
+  "MinecartSystem": "false",
+  "RemoveObjectsFromGreenhouse": "false",
+  "DisableIF2RGreenhouse": "false"
+}
