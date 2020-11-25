@@ -1,0 +1,24 @@
+﻿{
+  "loadLate": true,
+  "mergeMaps": [
+     //Misc fixes
+    {
+      "name": "Farm",
+      "file": "assets/fixed_greenhouse.tbin",
+      "sourceArea": [ 0, 0, 7, 10 ],
+      "position": [ 41, 41 ],
+      "conditions": "Hn ccPantry",
+      "removeEmpty":"false"
+    }
+  ],
+  "addMaps": [
+	{
+      "name": "DeepCave",
+      "file": "assets/DeepCave.tbin"
+    },
+	{
+      "name": "MinecartCave",
+      "file": "assets/MinecartCave.tbin"
+    },
+  ],
+}
