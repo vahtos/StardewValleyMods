@@ -21,20 +21,15 @@
     },
 	"Price": 1000,
 	"IsColored": false,
+	"CanPurchase": true,
+    "PurchaseFrom": "Gus",
+    "PurchasePrice": 3500,
 	"GiftTastes":
 	{
-		"Love": ["Olivia", "Victor", "Gus"],
-		"Like": ["MarlonFay", "Susan", "MorrisTod", "Elliott", "Lewis", "Wizard", "Harvey", "Leah"],
-		"Neutral": ["Alex", "Sam", "Shane", "Abigail", "Emily", "Haley", "Caroline", "Clint", "Demetrius", "Evelyn", "George", "Jodi", "Kent", "Linus", "Marnie", "Pam", "Pierre", "Robin", "Sandy", "Willy", "Sophia"],
-	    "Dislike": ["Sebastian", "Maru"],
-		"Hate": ["Andy", "Dwarf", "Krobus", "Jas", "Vincent", "Penny"]
-	},
-	"NameLocalization":
-	{
-		/*to be added in*/
-	},
-	"DescriptionLocalization":
-	{
-		/*to be added in*/
+		"Love": ["Olivia", "Victor", "Harvey", "Gus", "Leah", "Pam"],
+		"Like": ["MarlonFay", "Susan", "MorrisTod", "Elliott", "Lewis", "Wizard", "Jodi", "Pierre", "Robin"],
+		"Neutral": ["Alex", "Sam", "Shane", "Abigail", "Emily", "Haley", "Caroline", "Clint", "Demetrius", "Evelyn", "George", "Kent", "Linus", "Marnie", "Sandy", "Willy", "Sophia"],
+	    "Dislike": ["Sebastian", "Maru", "Jas", "Vincent", "Morgan", "Claire"],
+		"Hate": ["Andy", "Dwarf", "Krobus", "Martin", "Penny"]
 	},
 }

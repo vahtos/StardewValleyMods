@@ -122,14 +122,11 @@
         ],
         "UniqueAreaID": "Beach forage area 3",
         "MapName": "Beach",
-        "MinimumSpawnsPerDay": 4,
-        "MaximumSpawnsPerDay": 4,
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
-          "19,19;19,19",
-          "32,20;32,20",
-          "47,24;47,24",
           "3,6;3,6"
         ],
         "ExcludeCoordinates": [],
@@ -195,57 +192,10 @@
       },
       {
         "SpringItemIndex": [
-          22
-        ],
-        "SummerItemIndex": [
-          402
-        ],
-        "FallItemIndex": [
-          404
-        ],
-        "WinterItemIndex": [
-          418
-        ],
-        "UniqueAreaID": "Forest forage area 2",
-        "MapName": "Forest",
-        "MinimumSpawnsPerDay": 5,
-        "MaximumSpawnsPerDay": 5,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "74,39;74,39",
-          "72,45;72,45",
-          "67,41;67,41",
-          "69,45;69,45",
-          "99,86;99,86"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": null,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "LimitedNumberOfSpawns": 1
-        },
-        "DaysUntilSpawnsExpire": null
-      },
-      {
-        "SpringItemIndex": [
           20
         ],
         "SummerItemIndex": [
-          422
+          420
         ],
         "FallItemIndex": [
           281
@@ -297,7 +247,7 @@
         "UniqueAreaID": "BackWoods forage area 1",
         "MapName": "BackWoods",
         "MinimumSpawnsPerDay": 0,
-        "MaximumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 1,
         "IncludeTerrainTypes": [
           "Grass",
           "Diggable"
@@ -942,17 +892,13 @@
           18,
           20,
           22,
-          296,
           404
         ],
         "SummerItemIndex": [
-          259,
           396,
           398,
           402,
-          404,
-          420,
-          422
+          404
         ],
         "FallItemIndex": [
           257,
@@ -971,8 +917,8 @@
         ],
         "UniqueAreaID": "Forest West forage area 1",
         "MapName": "ForestWest",
-        "MinimumSpawnsPerDay": 3,
-        "MaximumSpawnsPerDay": 9,
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 8,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -1005,17 +951,14 @@
           18,
           20,
           22,
-          296,
           404
         ],
         "SummerItemIndex": [
-          259,
           396,
           398,
           402,
           404,
-          420,
-          422
+          420
         ],
         "FallItemIndex": [
           257,
@@ -1197,11 +1140,9 @@
           18,
           20,
           22,
-          296,
           404
         ],
         "SummerItemIndex": [
-          259,
           396,
           398,
           402,
@@ -1747,7 +1688,7 @@
         "WinterItemIndex": null,
         "UniqueAreaID": "ShearwaterBridge forage area 1",
         "MapName": "ShearwaterBridge",
-        "MinimumSpawnsPerDay": 0,
+        "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 3,
         "IncludeTerrainTypes": [
           "Grass",
@@ -2236,17 +2177,14 @@
       18,
       20,
       22,
-      296,
       404
     ],
     "SummerItemIndex": [
-      259,
       396,
       398,
       402,
       404,
-      420,
-      422
+      420
     ],
     "FallItemIndex": [
       257,
@@ -2267,6 +2205,44 @@
   },
   "Large_Object_Spawn_Settings": {
     "Areas": [
+      {
+        "ObjectTypes": [
+          "Log"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "Grandpa's Shed Logs",
+        "MapName": "GrandpasShedOutside",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "21,17;21,17",
+          "23,17;23,17"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "LimitedNumberOfSpawns": 2
+        },
+        "DaysUntilSpawnsExpire": null
+      },
       {
         "ObjectTypes": [
           "Meteorite"
@@ -2717,7 +2693,7 @@
               "SpawnWeight": 1,
               "HP": 2000,
               "Damage": 105,
-              "DodgeChance": 20,
+              "DodgeChance": 10,
               "Loot": [
                 "Void Pebble",
                 769,
@@ -2772,7 +2748,7 @@
               "SpawnWeight": 1,
               "HP": 1650,
               "Damage": 100,
-              "DodgeChance": 20,
+              "DodgeChance": 10,
               "Loot": [
                 "Void Pebble",
                 769,
@@ -2824,7 +2800,7 @@
               "SpawnWeight": 1,
               "HP": 1650,
               "Damage": 100,
-              "DodgeChance": 20,
+              "DodgeChance": 10,
               "Loot": [
                 "Void Pebble",
                 769,
@@ -2876,7 +2852,7 @@
               "SpawnWeight": 1,
               "HP": 400,
               "Damage": 60,
-              "DodgeChance": 70,
+              "DodgeChance": 50,
               "Loot": [
                 "Rusty Blade",
                 769,
@@ -2928,7 +2904,7 @@
               "SpawnWeight": 1,
               "HP": 400,
               "Damage": 60,
-              "DodgeChance": 70,
+              "DodgeChance": 50,
               "Loot": [
                 "Rusty Blade",
                 769,
@@ -2981,7 +2957,7 @@
               "SeesPlayersAtSpawn": true,
               "HP": 320,
               "Damage": 35,
-              "DodgeChance": 20
+              "DodgeChance": 13
             }
           }
         ],
@@ -3025,7 +3001,7 @@
               "SpawnWeight": 1,
               "HP": 1500,
               "Damage": 65,
-              "DodgeChance": 35,
+              "DodgeChance": 20,
               "Loot": [
                 "Void Pebble",
                 769,
@@ -3082,7 +3058,7 @@
               "SpawnWeight": 1,
               "HP": 5000,
               "Damage": 95,
-              "DodgeChance": 55,
+              "DodgeChance": 40,
               "Loot": [
                 "Void Shard",
                 769,
@@ -3135,34 +3111,35 @@
       {
         "MonsterTypes": [
           {
-            "MonsterName": "Serpent",
+            "MonsterName": "Carbon Ghost",
             "Settings": {
               "SpawnWeight": 1,
-              "HP": 1500,
-              "Damage": 65,
-              "DodgeChance": 35,
+              "HP": 335,
+              "Damage": 55,
+              "DodgeChance": 0,
+              "SeesPlayersAtSpawn": true,
               "Loot": [
                 "Void Pebble",
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                226
+                768,
+                768,
+                768
               ],
-              "Sprite": "Characters/Monsters/CorruptSerpent"
+              "Sprite": "Characters/Monsters/CorruptSpirit"
             }
           }
         ],
-        "UniqueAreaID": "Void Serpents at iridium quarry",
+        "UniqueAreaID": "Corrupt Ghosts at iridium quarry",
         "MapName": "IridiumQuarry",
-        "MinimumSpawnsPerDay": 0,
-        "MaximumSpawnsPerDay": 1,
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 5,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
-          "36,39;0,0"
+          "0,0;0,0",
+          "0,39;0,39",
+          "34,0;34,0",
+          "40,39;40,39",
+          "69,39;69,39"
         ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "High",
@@ -3170,7 +3147,7 @@
           "StartTime": 600,
           "EndTime": 600,
           "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 1,
+          "MaximumSimultaneousSpawns": 5,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
@@ -3193,7 +3170,7 @@
               "SpawnWeight": 1,
               "HP": 2500,
               "Damage": 110,
-              "DodgeChance": 23,
+              "DodgeChance": 15,
               "Loot": [
                 "Void Pebble",
                 769,
