@@ -3055,9 +3055,9 @@
             "Settings": {
               "SpawnWeight": 1,
               "HP": 12500,
-              "Damage": 115,
+              "Damage": 120,
               "DodgeChance": 30,
-              "Segments": 10,
+              "Segments": 7,
               "Loot": [
                 "Void Shard",
                 769,
