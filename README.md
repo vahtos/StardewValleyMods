@@ -26,4 +26,4 @@ Double click `StardewValleyModded.lnk` to run with mods.
 ## To Update
 1. Reinstall [SMAPI](https://smapi.io/) (if there is a new version)
 2. Open Powershell
-3. `cd "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods" && git pull`
+3. `cd "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods";git pull`
