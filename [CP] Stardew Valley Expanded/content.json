@@ -49,10 +49,10 @@
   "Default": "false"
         },
 		
-  "HarderBundles": {
+  /*"HarderBundles": {
   "AllowValues": "true, false",
   "Default": "false"
-        },
+        },*/
 
   "HarderBuildingConstruction": {
   "AllowValues": "true, false",
@@ -133,11 +133,11 @@
 		"MorrisTod": "Socialize, ItemDelivery, WinterStar, ShopDialog, IslandVisit",
 		"MarlonFay": "Socialize",
 		"GuntherSilvian": "ItemDelivery, WinterStar, ShopDialog, IslandVisit",
-		/*"Isaac": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit",    ...soon
+		"Isaac": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit",
 		"Camilla": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit",
 		"Alesia": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit",
-		"Lance": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit",
-		"Drake": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit"*/
+		"Lance": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit"
+		//"Drake": "ItemDelivery, Socialize, WinterStar, ShopDialog, IslandVisit"
 	 }
 },
 
@@ -201,12 +201,13 @@
 	 "When": { "HasMod": "alistairweekend.TSCCharacters" },
      "ToArea": { "X": 0, "Y": 24, "Width": 10, "Height": 6 }
 },
+
 {
      //Map patches new warp coordinates inside grandpa's shed
      "Action": "EditMap",
      "Target": "Maps/GrandpasShed",
      "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedNewWarps.tbin",
-	 "When": { "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+	 "When": { "FarmType |contains=Standard": false },
      "ToArea": { "X": 15, "Y": 17, "Width": 2, "Height": 1 }
 },
 
@@ -214,21 +215,21 @@
      "Action": "EditMap",
      "Target": "Maps/GrandpasShedRuins",
      "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedNewWarps.tbin",
-	 "When": { "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+	 "When": { "FarmType |contains=Standard": false },
      "ToArea": { "X": 15, "Y": 17, "Width": 2, "Height": 1 }
 },
 
 {
      "Action": "EditMap",
      "Target": "Maps/GrandpasShedRuins",
-     "When": { "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+     "When": { "FarmType |contains=Standard": false },
      "MapProperties": { "Warp": "-20 -20 Farm 50 50" }
 },
 
 {
      "Action": "EditMap",
      "Target": "Maps/GrandpasShed",
-     "When": { "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+     "When": { "FarmType |contains=Standard": false },
      "MapProperties": { "Warp": "-20 -20 Farm 50 50" }
 },
 
@@ -252,7 +253,7 @@
      "Action": "EditMap",
      "Target": "Maps/GrandpasShedRuins",
      "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedNewWarps2.tbin",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm" },
+	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard" },
      "ToArea": { "X": 15, "Y": 17, "Width": 2, "Height": 1 }
 },
 
@@ -260,15 +261,43 @@
      "Action": "EditMap",
      "Target": "Maps/GrandpasShed",
      "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedNewWarps2.tbin",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm" },
+	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard" },
      "ToArea": { "X": 15, "Y": 17, "Width": 2, "Height": 1 }
 },
 
 {
      "Action": "EditMap",
      "Target": "Maps/GrandpasShedRuins",
-     "When": { "HasMod": "flashshifter.GrandpasFarm" },
+     "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard" },
      "MapProperties": { "Warp": "15 17 Farm 20 22 16 17 Farm 21 22" }
+},
+
+{
+     //Fixes standard farm grandpa shed warps if players don't have IF2R or Grandpa's shed installed
+     "Action": "EditMap",
+     "Target": "Maps/GrandpasShed",
+     "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedNewWarps.tbin",
+	 "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+     "ToArea": { "X": 15, "Y": 17, "Width": 2, "Height": 1 }
+},
+{
+     "Action": "EditMap",
+     "Target": "Maps/GrandpasShedRuins",
+     "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedNewWarps.tbin",
+	 "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+     "ToArea": { "X": 15, "Y": 17, "Width": 2, "Height": 1 }
+},
+{
+     "Action": "EditMap",
+     "Target": "Maps/GrandpasShedRuins",
+     "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+     "MapProperties": { "Warp": "-20 -20 Farm 50 50" }
+},
+{
+     "Action": "EditMap",
+     "Target": "Maps/GrandpasShed",
+     "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=flashshifter.immersivefarm2remastered": false },
+     "MapProperties": { "Warp": "-20 -20 Farm 50 50" }
 },
 
 {       //GRANDPAS SHED QUEST LINE - event #1 - Tags event ID
@@ -285,27 +314,27 @@
 	 "Target": "data/events/Farm",
 	 "When": { "HasSeenEvent": "2554901", "HasMod": "flashshifter.immersivefarm2remastered", "HasMod |contains=flashshifter.GrandpasFarm": false, "FarmType":"Standard" },
 	 "Entries": {
-	 "2554902/H/w sunny/t 600 800": "continue/64 15/farmer 64 15 2 Robin 64 17 0/skippable/pause 1100/speak Robin \"Good morning @!$0#$b#I'm about to check the structural integrity of that abandoned shed on your property!$0#$b#I'm licensed by the 'Ferngill Republic Building Association' to make sure abandoned buildings aren't on the verge of collapsing...$0\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"If you have a moment, you can watch as I inspect the shed.$0\"/pause 500/globalFade/viewport -1000 -1000/changeLocation GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"Hmm...\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"I could actually refurbish this shed if I had the necessary materials.$0#$b#It'd be a fun project to challenge myself!$1\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"I'm estimating 150 pieces of hardwood to start...#$b#Most of the wood is rotten and will need to be replaced.$0\"/pause 500/emote Robin 40/speak Robin \"That's a hefty amount of wood to carry to my workshop...so I'll bring a storage chest here tomorrow morning where you can drop off the hardwood.$0#$b#I'll see you tomorrow with that storage chest @!$1\"/globalFade/viewport -1000 -1000/pause 500/end dialogue Robin \"I'll put my craftsmanship skills to the test with this shed project!$1#$e#I'm crafting a special storage chest for the project. We'll need more than just hardwood to refurbish the shed.$0\"",
+	 "2554902/H/w sunny/t 600 800": "continue/64 15/farmer 64 15 2 Robin 64 17 0/skippable/pause 1100/speak Robin \"Good morning @!$0#$b#I'm about to check the structural integrity of that abandoned shed on your property!$0#$b#I'm licensed by the 'Ferngill Republic Building Association' to make sure abandoned buildings aren't on the verge of collapsing...$0\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"If you have a moment, you can watch as I inspect the shed.$0\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Town/changeLocation GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"Hmm...\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"I could actually refurbish this shed if I had the necessary materials.$0#$b#It'd be a fun project to challenge myself!$1\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"I'm estimating 150 pieces of hardwood to start...#$b#Most of the wood is rotten and will need to be replaced.$0\"/pause 500/emote Robin 40/speak Robin \"That's a hefty amount of wood to carry to my workshop...so I'll bring a storage chest here tomorrow morning where you can drop off the hardwood.$0#$b#I'll see you tomorrow with that storage chest @!$1\"/globalFade/viewport -1000 -1000/pause 500/end dialogue Robin \"I'll put my craftsmanship skills to the test with this shed project!$1#$e#I'm crafting a special storage chest for the project. We'll need more than just hardwood to refurbish the shed.$0\"",
 	 
 	 },
 },
 
 {       //GRANDPAS SHED QUEST LINE - event #2 - Robin inspection Grandpa's Farm
 	 "Action": "EditData",
-	 "Target": "data/events/Farm",
-	 "When": { "HasSeenEvent": "2554901", "HasMod": "flashshifter.GrandpasFarm", "FarmType":"Standard" },
+	 "Target": "data/events/BusStop",
+	 "When": { "HasSeenEvent": "2554901", "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard" },
 	 "Entries": {
-	 "2554902/H/w sunny/t 600 800": "continue/64 15/farmer 64 15 2 Robin 64 17 0/skippable/pause 1100/speak Robin \"Good morning @!$0#$b#I'm about to check the structural integrity of that abandoned shed on your property!$0#$b#I'm licensed by the 'Ferngill Republic Building Association' to make sure abandoned buildings aren't on the verge of collapsing...$0\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"If you have a moment, you can watch as I inspect the shed.$0\"/pause 500/globalFade/viewport -1000 -1000/changeLocation GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"Hmm...\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"I could actually refurbish this shed if I had the necessary materials.$0#$b#It'd be a fun project to challenge myself!$1\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"I'm estimating 150 pieces of hardwood to start...#$b#Most of the wood is rotten and will need to be replaced.$0\"/pause 500/emote Robin 40/speak Robin \"That's a hefty amount of wood to carry to my workshop...so I'll bring a storage chest here tomorrow morning where you can drop off the hardwood.$0#$b#I'll see you tomorrow with that storage chest @!$1\"/globalFade/viewport -1000 -1000/pause 500/end dialogue Robin \"I'll put my craftsmanship skills to the test with this shed project!$1#$e#I'm crafting a special storage chest for the project. We'll need more than just hardwood to refurbish the shed.$0\"",
+	 "2554902/H/w sunny/t 600 1130": "continue/-300 -300/farmer 9 23 1 Robin 23 23 3/skippable/move farmer 5 0 1 true/move Robin -7 0 3 true/viewport 14 22 true/pause 2000/speak Robin \"Good morning @!$0#$b#Good timing. I'm about to check the structural integrity of that abandoned shed on your property!$0#$b#I'm licensed by the 'Ferngill Republic Building Association' to make sure abandoned buildings aren't on the verge of collapsing...$0\"/pause 1100/speak Robin \"If you have a moment, you can watch as I inspect the shed.$0\"/pause 500/globalFade/viewport -1000 -1000/changeLocation GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"Hmm...\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"I could actually refurbish this shed if I had the necessary materials.$0#$b#It'd be a fun project to challenge myself!$1\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"I'm estimating 150 pieces of hardwood to start...#$b#Most of the wood is rotten and will need to be replaced.$0\"/pause 500/emote Robin 40/speak Robin \"That's a hefty amount of wood to carry to my workshop...so I'll bring a storage chest here tomorrow morning where you can drop off the hardwood.$0#$b#I'll see you tomorrow with that storage chest @!$1\"/globalFade/viewport -1000 -1000/pause 500/end dialogue Robin \"I'll put my craftsmanship skills to the test with this shed project!$1#$e#I'm crafting a special storage chest for the project. We'll need more than just hardwood to refurbish the shed.$0\"",
 	 
 	 },
 },
 
-{       //GRANDPAS SHED QUEST LINE - event #2 - Robin inspection NO IF2R
+{       //GRANDPAS SHED QUEST LINE - event #2 - Robin inspection NO IF2R or Grandpa's Farm
 	 "Action": "EditData",
 	 "Target": "data/events/GrandpasShedOutside",
 	 "When": { "HasSeenEvent":"2554901", "HasMod |contains=flashshifter.immersivefarm2remastered": false, "HasMod |contains=flashshifter.GrandpasFarm": false },
 	 "Entries": {
-	 "2554902/H/w sunny/t 600 800": "continue/64 15/farmer 14 21 1 Robin 22 21 0/skippable/viewport 22 20 true/move farmer 6 0 1/pause 900/faceDirection Robin 3 true/pause 750/speak Robin \"Good morning @!$0#$b#I'm about to check the structural integrity of this abandoned shed!$0#$b#I'm licensed by the 'Ferngill Republic Building Association' to make sure abandoned buildings aren't on the verge of collapsing...$0\"/pause 1000/faceDirection Robin 0 true/pause 1300/faceDirection Robin 3 true/pause 500/speak Robin \"If you have a moment, you can watch as I inspect the shed.$0\"/pause 500/globalFade/viewport -1000 -1000/changeLocation GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"Hmm...\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"I could actually refurbish this shed if I had the necessary materials.$0#$b#It'd be a fun project to challenge myself!$1\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"I'm estimating 150 pieces of hardwood to start...#$b#Most of the wood is rotten and will need to be replaced.$0\"/pause 500/emote Robin 40/speak Robin \"That's a hefty amount of wood to carry to my workshop...so I'll bring a storage chest here tomorrow morning where you can drop off the hardwood.$0#$b#I'll see you tomorrow @ with that storage chest!$1\"/globalFade/viewport -1000 -1000/pause 500/end dialogue Robin \"I'll put my craftsmanship skills to the test with this shed project!$1#$e#I'm crafting a special storage chest for the project. We'll need more than just hardwood to refurbish the shed.$0\"",
+	 "2554902/H/w sunny/t 600 800": "continue/64 15/farmer 14 21 1 Robin 22 21 0/skippable/viewport 22 20 true/move farmer 6 0 1/pause 900/faceDirection Robin 3 true/pause 750/speak Robin \"Good morning @!$0#$b#I'm about to check the structural integrity of this abandoned shed!$0#$b#I'm licensed by the 'Ferngill Republic Building Association' to make sure abandoned buildings aren't on the verge of collapsing...$0\"/pause 1000/faceDirection Robin 0 true/pause 1300/faceDirection Robin 3 true/pause 500/speak Robin \"If you have a moment, you can watch as I inspect the shed.$0\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Town/changeLocation GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"Hmm...\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"I could actually refurbish this shed if I had the necessary materials.$0#$b#It'd be a fun project to challenge myself!$1\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"I'm estimating 150 pieces of hardwood to start...#$b#Most of the wood is rotten and will need to be replaced.$0\"/pause 500/emote Robin 40/speak Robin \"That's a hefty amount of wood to carry to my workshop...so I'll bring a storage chest here tomorrow morning where you can drop off the hardwood.$0#$b#I'll see you tomorrow @ with that storage chest!$1\"/globalFade/viewport -1000 -1000/pause 500/end dialogue Robin \"I'll put my craftsmanship skills to the test with this shed project!$1#$e#I'm crafting a special storage chest for the project. We'll need more than just hardwood to refurbish the shed.$0\"",
 	 
 	 },
 },
@@ -1380,7 +1409,7 @@
 	"When": { "LowerProfitMargins": true }
 },
 
-{	  //HARDER COMMUNITY CENTER BUNDLES
+/*{	  //HARDER COMMUNITY CENTER BUNDLES
     "Action": "EditData",
     "Target": "Data/Bundles",
 	"Entries": {
@@ -1431,7 +1460,7 @@
      "Abandoned Joja Mart/36": "The Missing//348 1 3 807 1 0 74 1 0 454 10 2 {{spacechase0.JsonAssets/ObjectId:Void Eel}} 1 0 445 1 0/1/5"
 	},
 	"When": { "HarderBundles": true, "HasMod |contains=alja.CPCCCB": false, "HasMod |contains=minervamaga.CP.HarderCCBundles": false, "HasMod |contains=Chaos234.CommunityCenterBundleOverhaul": false, "HasMod |contains=MoreFish": false, "HasMod |contains=Chaos234.CommunityCenterBundleOverhaul": false }
-},
+},*/
 
 
         //LOAD FENCES
@@ -1610,6 +1639,7 @@
    "AndyPictureLetter": "Hey farmer,^^Found something in the midst of organizin' my house. Drop on by and I'll show ya! I think you'll enjoy it.^^   -Andy",
    "SophiaThankYouLetter": "Hey you,^^Thanks for helping me restore my parents' room. I couldn't have done it without you, especially with the heavy stuff! I know it's strange I packed everything up and moved it all back... I suppose it was a change of heart.^Enclosed is a bottle of my finest aged Blue Moon wine. Thanks, silly!^^  -Sophia %item object {{spacechase0.JsonAssets/ObjectId:Aged Blue Moon Wine}} 1 %%",
    "escortedGunther": "Dear @,^^Enclosed is payment for your services. Thank you for aiding in my research and protecting me.^^ -Gunther %item money 20000 20001 %%",
+   "harveyBalloon": "@,^I have a surprise for you. Meet me in Grampleton Fields, across Shearwater Bridge!^   -Harvey[#]Harvey's Surprise",
 	}
 },
 
@@ -2154,10 +2184,18 @@
 	 "Target": "Maps/WizardHouse",
 	 "FromFile": "Assets/maps/locations/WizardHouse.tbin"
 },
+{    //adds lights to wizard interior after junimo event
+     "Action": "EditMap",
+     "Target": "Maps/WizardHouse",
+     "FromFile": "Assets/Maps/MapPatches/WizardHouse_Lights.tbin",
+	 "When": { "HasSeenEvent": "112" },
+     "ToArea": { "X": 0, "Y": 0, "Width": 15, "Height": 35 }
+},
 {
-     "Action": "Load",
+     "Action": "EditMap",
 	 "Target": "Maps/Caldera",
-	 "FromFile": "Assets/maps/locations/Caldera.tmx"
+	 "FromFile": "Assets/maps/mappatches/Caldera.tmx",
+	 "ToArea": { "X": 0, "Y": 0, "Width": 48, "Height": 48 }
 },
 
 
@@ -2544,6 +2582,40 @@
 	 "When": { "Year |contains=1": false, },
      "ToArea": { "X": 61, "Y": 92, "Width": 3, "Height": 2 }
 },
+
+{    //Changed NPC warp at bus stop to desert 
+     "Action": "EditMap",
+     "Target": "Maps/BusStop",
+     "MapProperties": { "NPCWarp": "12 8 DayEnd_WarpRoom 3 3" }
+},
+
+
+
+/*{    //Fixes glitched community center destroyed state revertion
+     "Action": "EditMap",
+     "Target": "Maps/Town",
+     "FromFile": "Assets/Maps/MapPatches/Town_CommunityCenter.tbin",
+	 "When": { "HasSeenEvent": "191393" },
+     "ToArea": { "X": 44, "Y": 11, "Width": 16, "Height": 12 }
+},
+
+{    //Fixes glitched community center joja theater
+     "Action": "EditMap",
+     "Target": "Maps/Town",
+     "FromFile": "Assets/Maps/MapPatches/Town_Joja_MovieTheater.tbin",
+	 "When": { "HasFlag": "ccMovieTheaterJoja", "HasSeenEvent": "5553210" },
+     "ToArea": { "X": 47, "Y": 11, "Width": 12, "Height": 12 }
+},
+
+{    //Fixes glitched community center destroyed state revertion
+     "Action": "EditMap",
+     "Target": "Maps/Town",
+     "FromFile": "Assets/Maps/MapPatches/Town_MovieTheater.tbin",
+	 "When": { "HasSeenEvent": "191393", "HasFlag": "ccMovieTheater",  },
+     "ToArea": { "X": 86, "Y": 42, "Width": 20, "Height": 11 }
+},*/
+
+
 
 {    //Fixes glitched shadows for the Joja Theater
      "Action": "EditMap",
@@ -3065,11 +3137,12 @@
      "Target": "Data/Festivals/fall27",
 	 "When": { "IsOddYear": true },
      "Entries": {
-	 "shop": "BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
+	 //"shop": "BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
      "set-up": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween/loadActors Set-Up/advancedMove Linus true 4 13000 1 0 4 6000 -1 0/advancedMove Sophia true 4 10000 1 3000 4 2000/advancedMove Maru true 1 5000 2 7000 3 3000 4 3500 1 2000 2 3000 3 1000 4 2000/advancedMove Alex true -3 0 4 4000 3 0 4 5000/advancedMove Jas true 1 1500 4 1000/advancedMove Abigail true 3 3500 2 3000 1 5000 3 5000 2 6000/advancedMove Harvey true 1 3500 4 5000 3 3000 2 5000 4 3000/advancedMove Pam true 0 1 3 7500 0 -1 3 5500/advancedMove Shane true -7 0 0 2 2 9000 0 -2 7 0 4 9000/advancedMove Demetrius true 3 18000 4 3000/addTemporaryActor Skeleton 16 32 30 59 2 false Monster/advancedMove Skeleton true 0 1 3 4000 2 0 0 -1 4 2000 -1 0 3 1000 2 2000 0 -1 4 4000 -1 0 0 1 2 5000/addTemporaryActor Skeleton 16 32 35 58 2 false Monster/addTemporaryActor Shadow_Brute 16 32 46 59 2 false Monster/addTemporaryActor Shadow_Brute 16 32 43 58 2 false Monster/advancedMove Shadow_Brute true -4 0 3 5000 4 0 2 5000 1 3000 2 1000/addTemporaryActor Skeleton_Mage 16 32 51 32 2 false Monster/advancedMove Skeleton_Mage true -2 0 0 2 1 6000 0 -2 2 0 2 5000/addTemporaryActor Wilderness_Golem 16 24 63 25 3 false Monster/advancedMove Wilderness_Golem true -9 0 0 2 2 1000 0 -2 9 0 2 1500/addTemporaryActor Stone_Golem 16 24 54 32 1 false Monster/advancedMove Stone_Golem true 9 0 4 1000 -9 0 4 400/addTemporaryActor Shadow_Shaman 16 24 68 23 2 false Monster/advancedMove Shadow_Shaman true 1 1500 2 2000 3 3000 2 5000 4 1000/addTemporaryActor Metal_Head 16 16 74 27 2 false Monster/advancedMove Metal_Head true -4 0 2 200 4 0 4 100/addTemporaryActor Mummy 16 32 74 24 2 false Monster/advancedMove Mummy true -2 0 3 200 2 0 2 6000/playerControl halloween",
 	 "Wizard": "Hello, @. Have you entered the maze? I deployed... surprises for anyone who dares enter.#0#$e#I might have gone a little overboard with the monsters!$h",
 	 "Linus": "Hi, @. I hope this evening is treating you well.$0#$b#Many shadow brutes are violent, but these ones are particularly aggressive. If given the opportunity, they would tear you limb from limb!$3#$e#Not all shadow people are violent, though.$0#$b#I'm good friends with one called 'Krobus'. I understand what it's like to be judged for being different.$h#$e#Enjoy the festival.$1",
      "Krobus": "My friends... trapped in those cages...#$e#What will happen to them after the festival...?$2",
+	 "Pierre": "Happy Spirit's Eve, farmer @!$1#$e#Let me know if anything in my store catches your eye.$0",
      "Dwarf": "Curious, I am...#$e#Did you climb up here to greet me?",
 	 "Leo": "I grew up exploring lush jungle mazes. This one was too easy!$0#$e#I don't need the stuff in the chest. It's yours!$1"
 	 }
@@ -3160,9 +3233,9 @@
      "Target": "Data/Festivals/fall27",
 	 "When": { "IsOddYear": false },
      "Entries": {
-	 "shop": "O 373 0 3 O 608 0 3 BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
+	 //"shop": "O 373 0 3 O 608 0 3 BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
      "set-up": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween/loadActors Set-Up/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/pause 1/warp Victor 29 67/faceDirection Victor 2 true/warp Olivia 29 62/faceDirection Olivia 3 true/warp Andy 47 60/faceDirection Andy 2 true/warp Susan 35 69/faceDirection Susan 1 true/warp Sophia 27 20/faceDirection Sophia 2 true/warp MarlonFay 23 63/faceDirection MarlonFay 2 true/advancedMove Harvey true 2 5000 1 200 2 200 0 5 4 0 0 2 -6 0 0 -9 4 2000 -1 0 0 1 2 2000 3 2000 2 200 1 4000 2 4000 2 200 1 0 0 8 6 0 0 -2 -4 0 0 -5 4 2000 1 200 2 5000 3 1000/advancedMove Sophia true 2 8000 3 2000 2 4000 1 2500 2 500/advancedMove Sebastian true 2 7000 1 500 2 0 1 250 2 6000 -2 0 2 500/advancedMove Olivia true 3 12000 4 1250 3 5000 2 2000 3 1000/advancedMove Demetrius true 1 18000 2 300 3 200 -1 0 0 4 2 7000 1 200 4 200 0 -4 1 0 1 1000/advancedMove Alex true 4 5000 3 0 1 300 4 4000 3 500 -3 0 3 300 4 500/advancedMove Emily true 1 14000 2 200 3 3500 2 200 1 2000/advancedMove Andy true 3 32000 2 0 0 8 1 5000 0 -8 -2 0 3 1000/advancedMove Susan true 3 15000 0 1 3 7000 0 -1 3 1000/advancedMove Shane true 3 3000 1 0 0 7 2 6500 3 200 4 500 0 -7 -1 0 3 15000/advancedMove Victor true 2 8000 2 0 2 6000 -2 0 2 9000/advancedMove Robin true 1 16000 2 4000/advancedMove Linus true 3 24000 4 2500/advancedMove Haley true 2 7000 1 500 2 4000 1 3000 2 3000/advancedMove Maru true 2 7000 -7 0 2 2000 7 0 1 4000 2 1000/advancedMove Abigail true 2 13000 3 2000/advancedMove Elliott true 2 8000 3 2000 2 2500 3 1000 -1 0 0 -2 -8 0 0 -4 4 500 1 200 2 4000 0 4 8 0 0 2 1 0 1 200 2 1000/advancedMove Penny true 2 9000 -2 0 2 7000 2 0/advancedMove Sam true 2 12000 1 4000 2 1500/addTemporaryActor Mummy 16 32 28 71 2 false Monster/advancedMove Mummy true 4 12000 -2 0 4 5000 2 0 1 2000 2 4000 1 300 4 1000/addTemporaryActor Skeleton 16 32 23 70 0 false Monster/advancedMove Skeleton true 4 9000 1 0 0 -1 4 12000 1 500 2 1000 0 1 2 600 -1 0 3 500 4 500/addTemporaryActor Wilderness_Golem 16 24 25 73 2 false Monster/advancedMove Wilderness_Golem true 4 5000 8 0 4 7000 1 2000 4 400 3 500 -8 0 3 500 4 500/addTemporaryActor Shadow_Shaman 16 24 30 69 2 false Monster/advancedMove Shadow_Shamn true 4 8000 1 4000 4 3000 2 6000 -1 0 2 4000 4 3000 2 500 3 0 1 6000 4 6000 3 2000 -2 0 3 500 4 2000/addTemporaryActor Stone_Golem 16 24 31 72 2 false Monster/advancedMove Stone_Golem true 4 4000 1 4000 4 3000 1 3500 4 2000 0 -1 4 4000 1 3000 -1 0 3 3000 4 5000 1 500 1 0 1 4000 0 1 2 1000 3 500 4 1000/addTemporaryActor Shadow_Brute 16 32 33 71 1 false Monster/advancedMove Shadow_Brute true 1 3000 4 600 0 -2 4 500 1 10000 4 5000 1 2000 2 700 0 2 2 600 1 4000/playerControl halloween",
-     "Pierre": "Happy Spirits' Eve, farmer @!$h#$e#No 'spooky' monsters in the maze this year.$0#$b#But it is... more difficult from what I've gathered.$1",
+     "Pierre": "Happy Spirit's Eve, farmer @!$1#$e#Let me know if anything in my store catches your eye.$0",
 	 "Marnie": "Are you ready to head back, Jas?$2",
 	 "Jas": "We're so close to winning! I can feel it, aunt Marnie!$1",
 	 "Alex": "There's a bunch of bright lights on the other side of the fences.$0",
@@ -7993,7 +8066,7 @@
         },
 },
 
-{   //MARLON 1 HEART EVENT
+/*{   //MARLON 1 HEART EVENT   - Disabled for now. Will be remastered into a 2 heart event.
 	 "Action": "EditData",
 	 "Target": "data/events/adventureguild",
 	 "Entries": {
@@ -8001,7 +8074,7 @@
 	 
 	 "1050034_GuildHistory": "pause 1000/speak MarlonFay \"Follow me.\"/pause 100/globalFade/viewport -1000 -1000/pause 500/warp farmer 4 5/warp MarlonFay 6 5/faceDirection farmer 1/showFrame MarlonFay 18/pause 250/viewport 7 6 true/pause 1500/speak MarlonFay \"Hmm... where to begin...\"/pause 600/emote MarlonFay 40/pause 200/speak MarlonFay \"I'll start with the history of the guild.#$b#I founded the Adventurer's Guild over 25 years ago, after being recognized by the Order of the Knights of Pythagoras.#$b#Our Order is made up of over fifty guilds and clans around the world, spanning every continent.#$b#Our mission is to protect humanity from monsters corrupted by ancient dark magic. No one knows when this corruption started, or how it began.#$b#Some ancient legends speak of a past time when monsters and humans lived in peace. If those times were ever real, they now only exist in stories.#$b#So we, the Order of the Knights of Pythagoras, have sworn an oath to protect humans from those monsters. We are, in a way, monster hunters.\"/pause 1050/speak MarlonFay \"This guild in particular works closely with M. Rasmodius. You may know him as the 'Wizard'.#$b#Every guild has a wizard or witch that supports them. It's paramount our weapons are imbued with magic to pierce the life force of monsters.#$b#You may wonder why we use swords instead of conventional weapons.#$b#To destroy the life force of a monster, you must pierce their life force fibers in a slashing movement.#$b#This is the only way to ensure the monster is defeated, or else it will regenerate.#$b#Projectile weapons unfortunately don't do the trick. They are able to stun monsters, but they still require a good horizontal slash to finish them off.#$b#If you ever use a projectile weapon, you may understand what I mean, unless you use explosives or iridium ammunition.\"/pause 1000/speak MarlonFay \"Alesia was a gifted sniper who used magic-imbued arrows. She used to be a member of this guild before she moved to Castle Village in the desert.#$b#She used her arrows to stun monsters before finishing them with her dagger.\"/pause 1000/showFrame MarlonFay 0/pause 800/showFrame MarlonFay 18/pause 1000/speak MarlonFay \"You may have noticed you're the 23rd adventurer, but there are only a few of us here. We used to have many more members.#$b#Over time, people have left to join other guilds and... and we...\"/pause 500/showFrame MarlonFay 19/pause 650/speak MarlonFay \"We have lost a lot of good people over the years. What we do is dangerous, and it's a thankless job.#$b#Thanks for joining our cause. Your help in protecting the valley is greatly appreciated. I feel as if we're a fully functioning guild again.\"/pause 800/speak MarlonFay \"$q -1 null#(What should I say)#$r -1 0 marlon_event2#I'll do everything I can to protect people.#$r -1 0 marlon_event5#It's dangerous and risky. Someone needs to do it.\"/pause 1000/showFrame MarlonFay 0/pause 1000/showFrame MarlonFay 18/pause 500/speak MarlonFay \"I'm proud to hear that from you. You have the potential to be an excellent swordsman.\"/pause 1250/speak MarlonFay \"You may be wondering why the mine entrance isn't sealed off.#$b#Unfortunately, Joja owns the rights to the mines and won't allow us to seal it.#$b#It's strange. They don't utilize the mines in any way, despite bountiful amounts of ore.#$b#Because of this, we must venture into the mines and slay monsters before they accumulate in mass.\"/pause 600/speak MarlonFay \"$q -1 null#(What should I say)#$r -1 0 marlon_event4#There must be strong monsters deep in the mines...#$r -1 0 marlon_event3#I'll prove I have what it takes!\"/pause 1000/speak MarlonFay \"I must disclose to you that not every monster is corrupted and hostile.#$b#There is a Shadow Person living in the sewer. His name is 'Krobus'. Rasmodius and I have been harboring him.#$b#This is to remain a secret. You'll meet Krobus soon enough. I need to see you prove your worth before I introduce you to him.$2\"/pause 1200/speak MarlonFay \"I believe that's enough conversation for you today. I'll speak with you again soon on other matters.#$b#I need to check on a new stock of weapons we just received from the new blacksmith in Castle Village.\"/pause 100/globalFade/viewport -1000 -1000/pause 700/end dialogue MarlonFay \"Remember what I said. Krobus is to remain a secret. There would be dire consequences if anyone got wind of him.\"",
      },
-},
+},*/
 
 {   //MARLON 4 HEART EVENT
 	 "Action": "EditData",
@@ -11166,7 +11239,7 @@
       "6951319": "continue/-500 -500/farmer 22 37 0 Lance -100 -100 2/skippable/pause 1250/showFrame Lance 39 true/viewport 22 32 true/viewport move 0 -1 4000 true/move farmer 0 -8 0/pause 650/faceDirection farmer 1/pause 1250/faceDirection farmer 0/faceDirection farmer 3/pause 1100/faceDirection farmer 0/pause 600/move farmer 0 -3 0 true/viewport move 0 -1 3000 true/pause 1500/warp Lance 22 22/pause 100/showFrame Lance 38 true/pause 100/showFrame Lance 37 true/pause 100/emote farmer 16 true/showFrame Lance 36 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 28 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 21 true/pause 100/showFrame Lance 20 true/pause 650/speak Lance \"*chuckle* Few adventurers have scaled Mount Kohldur, once a great dwarf kingdom.$0#$b#Your achievement is a testament to your ambition and perseverance...$5\"/pause 1000/speak Lance \"Behind me is a lava-fed furnace capable of enchanting weapons and tools.$6#$b#It can even combine the divine properties of magical rings.$0#$b#A suiting reward for someone of your stature...$5\"/pause 1000/move Lance 0 2 2/pause 300/speak Lance \"I trust you'll make good use out of this ancient dwarfish relic, @.$0#$b#The First Slash sends their regards...$1\"/pause 500/showFrame Lance 21 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 28 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 36 true/pause 100/showFrame Lance 37 true/pause 100/showFrame Lance 38 true/pause 100/showFrame Lance 39 true/pause 100/warp Lance -100 -100/pause 200/globalFade/viewport -1000 -1000/pause 50/end position 22 25"
 	   },
     },
-	
+	/* Map patched disabled until further notice. Error: Resets player progression on island
 	{  
 	  //Lance Beach 1 - player must cheat to talk - abs
       "Action": "EditMap",
@@ -11211,7 +11284,7 @@
       "ToArea": { "X": 36, "Y": 24, "Width": 1, "Height": 3 },
 	  "When": { "HasSeenEvent": "6951319", "Day": "7, 18, 22" }
     },
-
+    */
 
       //ALESIA NPC
 	  
@@ -11920,7 +11993,7 @@
     "Action": "EditData",
     "Target": "Data/Events/adventureguild",
     "Entries": {
-    "2468003/e 2468002": "none/-500 -500/farmer -50 -50 0 GuntherSilvian 5 13 1 Marlon -51 -51 0 MarlonFay 7 13 3/pause 1000/playMusic MarlonsTheme/pause 650/viewport 6 14 true/skippable/pause 1300/speak Marlon \"Afraid the answer is still no, Gunther.$0#$b#I can't be held responsible should anything happen down there...$2#$b#I hope you understand.$0\"/pause 500/speak Gunther \"I will respect your decision. Thank you for your time.$5\"/pause 850/warp farmer 6 19/playSound doorClose/pause 450/faceDirection MarlonFay 2 true/pause 200/move farmer 0 -4 0 true/pause 600/faceDirection GuntherSilvian 2 true/pause 1000/speak Gunther \"Hello Mr. @.$5^Hello Ms. @.$5\"/pause 600/emote farmer 8/pause 300/speak Gunther \"Ah. I'm seeking to hire an adventurer to escort me in the mines.$5#$b#To continue my research, I require a hands-on approach.$1#$b#I'd go myself, but those caverns are home to hordes of monsters...$2\"/pause 400/showFrame MarlonFay 18 true/pause 550/speak Marlon \"Perhaps @ would oblige with your request.$0\"/pause 700/showFrame GuntherSilvian 21/pause 1200/showFrame GuntherSilvian 0/pause 600/speak Gunther \"Well, Mr. @?$5^Well, Ms. @?$5\"/pause 500/showFrame MarlonFay 0 true/question fork0 \"Can you escort me in the mines?#Sure. But you must do exactly as I say.#No. It's far too risky.\"/fork GuntherEscort_2468003/addConversationTopic guntherEscortDenied/pause 300/showFrame MarlonFay 18 true/pause 700/friendship GuntherSilvian -100/speak Gunther \"I'll find someone else to assist...$2#$b#Thank you for your time.$5\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end",
+    "2468003/e 2468002": "none/-500 -500/farmer -50 -50 0 GuntherSilvian 5 13 1 Marlon -51 -51 0 MarlonFay 7 13 3 Gunther -30 -30 1/pause 1000/playMusic MarlonsTheme/pause 650/viewport 6 14 true/skippable/pause 1300/speak Marlon \"Afraid the answer is still no, Gunther.$0#$b#I can't be held responsible should anything happen down there...$2#$b#I hope you understand.$0\"/pause 500/speak Gunther \"I will respect your decision. Thank you for your time.$5\"/pause 850/warp farmer 6 19/playSound doorClose/pause 450/faceDirection MarlonFay 2 true/pause 200/move farmer 0 -4 0 true/pause 600/faceDirection GuntherSilvian 2 true/pause 1000/speak Gunther \"Hello Mr. @.$5^Hello Ms. @.$5\"/pause 600/emote farmer 8/pause 300/speak Gunther \"Ah. I'm seeking to hire an adventurer to escort me in the mines.$5#$b#To continue my research, I require a hands-on approach.$1#$b#I'd go myself, but those caverns are home to hordes of monsters...$2\"/pause 400/showFrame MarlonFay 18 true/pause 550/speak Marlon \"Perhaps @ would oblige with your request.$0\"/pause 700/showFrame GuntherSilvian 21/pause 1200/showFrame GuntherSilvian 0/pause 600/speak Gunther \"Well, Mr. @?$5^Well, Ms. @?$5\"/pause 500/showFrame MarlonFay 0 true/question fork0 \"Can you escort me in the mines?#Sure. But you must do exactly as I say.#No. It's far too risky.\"/fork GuntherEscort_2468003/addConversationTopic guntherEscortDenied/pause 300/showFrame MarlonFay 18 true/pause 700/friendship GuntherSilvian -100/speak Gunther \"I'll find someone else to assist...$2#$b#Thank you for your time.$5\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end",
 	
 	"GuntherEscort_2468003": "friendship GuntherSilvian 100/pause 300/showFrame MarlonFay 0 true/pause 300/speak Gunther \"Thank you. I promise to be careful.$5^Thank you. I promise to be careful.$5\"/pause 600/showFrame MarlonFay 18 truepause 500/speak Marlon \"@ is a seasoned adventurer and will serve well in protecting you, Gunther.$0#$b#I do, however, require you to learn a couple combat stances at a minimum for your own safety.$0\"/pause 800/showFrame GuntherSilvian 21/pause 800/speak Gunther \"Of course.$5\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1250/speak Gunther \"Marlon is going to run down some things with me.$5#$b#Meet me at the mines entrance tomorrow before the museum opens for the day.$1\"/pause 1500/end",
 	},
@@ -13416,7 +13489,7 @@
      },
 },
 
-{    //SANDY SCHEDULE - Visits Stardew Valley
+{    //SANDY SCHEDULE - Visits Stardew Valley (joja route)
 	 "Action": "EditData",
 	 "Target": "characters/schedules/Sandy",
 	 "When": { "Hearts:Sandy": "5, 6, 7, 8, 9, 10", "HasMod |contains=foggy.LfL": false, "HasSeenEvent": "5553210" },
@@ -13479,6 +13552,23 @@
      "FromFile": "Assets/Maps/MapPatches/SandyHouseNoShop.tbin",
      "ToArea": { "X": 1, "Y": 6,"Width": 3, "Height": 1 },
      "When": { "Hearts:Sandy": "5, 6, 7, 8, 9, 10", "HasSeenEvent": "191393", "Day": "22", "HasMod |contains=foggy.LfL": false },
+},
+
+{    //Sandy's birthday - SANDY
+	 "Action": "EditData",
+	 "Target": "characters/schedules/Sandy",
+	 "Entries": {
+     "fall_15": "MAIL ccVault/630 SandyHouse 2 5 2/1210 SandyHouse 3 5 1 \"Strings\\schedules\\Sandy:Sandy_Birthday_Greeting\"/1300 Desert 29 48 3 \"Strings\\schedules\\Sandy:Sandy_Birthday_Hangout\"/1500 Desert 14 47 2 \"Strings\\schedules\\Sandy:Sandy_Birthday_Lake\"/1900 35 25 1 \"Strings\\schedules\\Sandy:Sandy_Birthday_Camel\"/2130 Desert 29 24 3 \"Strings\\schedules\\Sandy:Sandy_Birthday_Bye\"/2400 Desert 29 24 3 sandy_wave/2410 SandyHouse 2 5 2"
+
+	 },
+},
+
+{    //Sandy's birthday - EMILY
+	 "Action": "EditData",
+	 "Target": "characters/schedules/Emily",
+	 "Entries": {
+     "fall_15": "MAIL ccVault/900 HaleyHouse 16 5 2/1000 SandyHouse 4 5 3 \"Strings\\schedules\\Emily:Sandy_Birthday_Greeting\"/1300 Desert 27 48 1 \"Strings\\schedules\\Emily:Sandy_Birthday_Hangout\"/1500 Desert 13 47 2 \"Strings\\schedules\\Emily:Sandy_Birthday_Lake\"/1900 37 25 0 \"Strings\\schedules\\Emily:Sandy_Birthday_Camel\"/2130 Desert 28 24 1 \"Strings\\schedules\\Emily:Sandy_Birthday_Bye\"/2400 HaleyHouse 21 4 1 emily_sleep"
+	 },
 },
 
    //Festival Dialogue
@@ -15835,8 +15925,15 @@
 
      "1000510_MarnieMelon": "pause 200/speak Marnie \"Shane has been taking more responsibility with the livestock lately, giving me more time to take care of the crops.$0#$b#I appreciate his help.$1\"/pause 500/move Marnie 0 0 0/pause 800/move Marnie 0 0 1/pause 300/speak Marnie \"I'm about done here, @. I enjoyed our conversation!$1\"/pause 200/globalFade/viewport -1000 -1000/pause 1200/friendship Marnie 50/end dialogue Marnie \"Hi, @. I appreciated our chat in my garden earlier.$1\""
 	 },
+},*/
+
+{       //Krobus Event    /a 0 23 0 24
+	 "Action": "EditData",
+	 "Target": "data/events/busstop",
+	 "Entries": {
+     "520702/t 600 1600/z spring/z fall/z summer": "winter_day_ambient/-1000 -1000/farmer 0 23 1 Krobus 16 23 3/viewport 14 23 clamp true/addQuest 31/skippable/move Krobus -2 0 3/pause 1000/emote Krobus 16/jump Krobus/pause 500/speed Krobus 8/move Krobus 20 0 1 true/move farmer 2 0 1 true/move false/playSound shadowpeep/warp Krobus -1000 -1000/pause 500/emote farmer 8/pause 1000/end"
+   }
 },
-*/
 
 {       //PAM EVENT
 	 "Action": "EditData",
@@ -16334,14 +16431,22 @@
 	   }
 	},
 	
-{	    //HARVEY 10 HEART EVENT PATHING FIX - Harvey's Balloon still glitches through the fence, trees, grass. Fixing this bug would require an immense amount of troubleshooting and time. 
+{	    //HARVEY 10 HEART EVENT CHANGE
 	 "Action": "EditData",
-     "Target": "data/events/railroad",
+     "Target": "data/events/ShearWaterBridge",
      "Entries": {
-	 "528052/f Harvey 2500/t 900 1700/n harveyBalloon": "playful/26 38/Harvey 29 41 3 farmer 29 49 0/move farmer 0 -7 0/faceDirection Harvey 2/speak Harvey \"There you are... just in time!$l\"/faceDirection Harvey 3/jump Harvey/pause 800/speak Harvey \"Look, here it comes!$8\"/emote farmer 8/pause 300/move farmer 0 0 3/pause 400/emote farmer 16/pause 300/addTemporaryActor Marcello 16 32 25 19 2 true/positionOffset Marcello 36 558/animate Marcello false true 400 16 17/specificTemporarySprite marcelloLand/null/pause 1000/stopAnimation Marcello/pause 500/message \"Marcello's Balloon Rentals at your service!\"/pause 1000/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/jump Marcello 12/move Marcello 0 1 2/pause 700/move Marcello 0 0 1/pause 800/move Marcello 3 0 1/pause 500/message \"Marcello: It's all yours for two hours.\"/faceDirection Marcello 3/pause 1000/faceDirection Marcello 2/message \"Marcello: Now... I was told there's a saloon somewhere around here?\"/pause 500/move Marcello 0 1 2/move farmer 0 0 2/move Marcello 0 8 2/warp Marcello -100 -100/faceDirection farmer 0/pause 500/faceDirection Harvey 2/pause 500/speak Harvey \"I saw an ad in the paper for these balloon rides and I knew I had to surprise you with one.\"/pause 800/question fork1 \"#This looks fun! Let's ride!#...But aren't you afraid of heights?\"/fork afraid/pause 500/speak Harvey \"Okay... you first.$l\"/pause 400/move farmer -1 0 0/move farmer 0 -1 1/move Harvey 0 0 3/pause 500/emote farmer 32/emote Harvey 32/pause 500/move farmer -3 0 0/jump farmer 10/move farmer 0 -1 2/move Harvey -3 0 0/jump Harvey 10/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/playMusic none/cutscene balloonDepart/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"We... We're up so high... *gulp*$8\"/shake Harvey 2000/pause 800/speak Harvey \"I wanted to impress you with this... but look at me. I'm a trembling coward.$7\"/emote Harvey 28/pause 500/speak Harvey \"Well, you've got more than enough courage to make up for me, @... that's... that's part of why I like you.$11\"/pause 1000/speak Harvey \"Okay, I'm going to open my eyes and look down... don't let go of my hand.$4\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"I... I think I can do it now.$8\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"Hey, this is incredible! I think I can see Mayor Lewis standing in the town square!$h\"/faceDirection farmer 2/pause 3000/speak Harvey \"Oh dear... our time's almost up.$s\"/pause 400/faceDirection Harvey 3/faceDirection farmer 1/playMusic none/pause 500/speak Harvey \"Um... @? We've known each other for a while now and... I... er...$11\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"...$11\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 5000/globalFade/viewport -1000 -1000/pause 2000/speak Harvey \"Whoops... Our time was up half an hour ago. We'd better touch down.$l\"/pause 2000/end dialogue Harvey \"I haven't had such a wonderful day for as long as I can remember.$l\"",
-     
-	 "afraid": "pause 500/speak Harvey \"I am... yeah.$s#$b#But I'm determined to not let that stop me from doing what I want... and experiencing this with you.$l#$b#I'll try not to get scared.\"/pause 400/move farmer -1 0 0/move farmer 0 -1 1/move Harvey 0 0 3/pause 500/emote farmer 32/emote Harvey 32/pause 500/move farmer -3 0 0/jump farmer 8/move farmer 0 -1 2/move Harvey -3 0 0/jump Harvey 10/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/cutscene balloonDepart/playMusic none/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"We... We're up so high... *gulp*$8\"/shake Harvey 2000/pause 800/speak Harvey \"I wanted to impress you with this... but look at me. I'm a trembling coward.$7\"/emote Harvey 28/pause 500/speak Harvey \"Well, you've got more than enough courage to make up for me, @... that's... that's part of why I like you.$11\"/pause 1000/speak Harvey \"Okay, I'm going to open my eyes and look down... don't let go of my hand.$4\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"I... I think I can do it now.$8\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"Hey, this is incredible! I think I can see Mayor Lewis standing in the town square!$h\"/faceDirection farmer 2/pause 3000/speak Harvey \"Oh dear... our time's almost up.$s\"/pause 400/faceDirection Harvey 3/faceDirection farmer 1/playMusic none/pause 500/speak Harvey \"Um... @? We've known each other for a while now and... I... er...$11\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"...$11\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 5000/globalFade/viewport -1000 -1000/pause 5000/globalFade/viewport -1000 -1000/pause 2000/speak Harvey \"Whoops... Our time was up half an hour ago. We'd better touch down.$l\"/pause 2000/end dialogue Harvey \"I haven't had such a wonderful day for as long as I can remember.$l\"",
-    }
+	     "528052/f Harvey 2500/t 900 1700/n harveyBalloon": "continue/-300 -300/Harvey -100 -100 0 farmer 40 21 1/skippable/viewport 40 22 true/viewport move 2 0 6000 true/move farmer 12 0 1 true/pause 3500/globalFade/viewport -1000 -1000/halt/changeLocation GrampletonFields_Small/playMusic playful/warp farmer 16 42/faceDirection farmer 1/warp Harvey 24 41/faceDirection Harvey 0/viewport 24 43 true/move farmer 8 0 0/pause 500/faceDirection Harvey 3 true/pause 200/faceDirection Harvey 2/pause 250/speak Harvey \"There you are... just in time!$l\"/faceDirection Harvey 0/jump Harvey/pause 800/speak Harvey \"Look, here it comes!$8\"/emote farmer 8/move Harvey -1 0 1/move farmer -2 0 0/move farmer 0 -1 1/addTemporaryActor Marcello 16 32 25 19 2 true/positionOffset Marcello 36 558/animate Marcello false true 400 16 17/specificTemporarySprite marcelloLand/null/pause 1000/stopAnimation Marcello/pause 500/message \"Marcello's Balloon Rentals at your service!\"/pause 1000/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/jump Marcello 12/move Marcello 0 3 3/move Marcello -2 0 0/faceDirection Harvey 2/faceDirection farmer 2/message \"Marcello: It's all yours for two hours.\"/faceDirection Marcello 3/faceDirection Marcello 2/message \"Marcello: Now... I was told there's a saloon back in town?\"/pause 600/globalFade/viewport -1000 -1000 true/warp Marcello -100 -100/viewport 24 43 true/faceDirection farmer 1/faceDirection Harvey 3/pause 500/speak Harvey \"I saw an ad in the paper for these balloon rides and I knew I had to surprise you with one.\"/pause 800/question fork1 \"#This looks fun! Let's ride!#...But aren't you afraid of heights?\"/fork afraid/pause 500/speak Harvey \"Okay... you first.$l\"/pause 400/move farmer 0 1 1/faceDirection Harvey 1/move farmer 3 0 0/move farmer 0 -1 0/jump farmer 14/move farmer 0 -1 2/move Harvey 0 1 1/move Harvey 3 0 0/move Harvey 0 -1 0/jump Harvey 14/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/playMusic none/cutscene balloonDepart/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/viewport -2000 -2000/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"We... We're up so high... *gulp*$8\"/shake Harvey 2000/pause 800/speak Harvey \"I wanted to impress you with this... but look at me. I'm a trembling coward.$7\"/emote Harvey 28/pause 500/speak Harvey \"Well, you've got more than enough courage to make up for me, @... that's... that's part of why I like you.$11\"/pause 1000/speak Harvey \"Okay, I'm going to open my eyes and look down... don't let go of my hand.$4\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"I... I think I can do it now.$8\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"Hey, this is incredible! I think I can see Mayor Lewis standing in the town square!$h\"/faceDirection farmer 2/pause 3000/speak Harvey \"Oh dear... our time's almost up.$s\"/pause 400/faceDirection Harvey 3/faceDirection farmer 1/playMusic none/pause 500/speak Harvey \"Um... @? We've known each other for a while now and... I... er...$11\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"...$11\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 5000/globalFade/viewport -1000 -1000/pause 2000/speak Harvey \"Whoops... Our time was up half an hour ago. We'd better touch down.$l\"/pause 2000/end dialogue Harvey \"I haven't had such a wonderful day for as long as I can remember.$l\"",
+         "afraid": "pause 500/speak Harvey \"I am... yeah.$s#$b#But I'm determined to not let that stop me from doing what I want... and experiencing this with you.$l#$b#I'll try not to get scared.\"/pause 400/move farmer 0 1 1/faceDirection Harvey 1/move farmer 3 0 0/move farmer 0 -1 0/jump farmer 14/move farmer 0 -1 2/move Harvey 0 1 1/move Harvey 3 0 0/move Harvey 0 -1 0/jump Harvey 14/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/cutscene balloonDepart/playMusic none/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/viewport -2000 -2000/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"We... We're up so high... *gulp*$8\"/shake Harvey 2000/pause 800/speak Harvey \"I wanted to impress you with this... but look at me. I'm a trembling coward.$7\"/emote Harvey 28/pause 500/speak Harvey \"Well, you've got more than enough courage to make up for me, @... that's... that's part of why I like you.$11\"/pause 1000/speak Harvey \"Okay, I'm going to open my eyes and look down... don't let go of my hand.$4\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"I... I think I can do it now.$8\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"Hey, this is incredible! I think I can see Mayor Lewis standing in the town square!$h\"/faceDirection farmer 2/pause 3000/speak Harvey \"Oh dear... our time's almost up.$s\"/pause 400/faceDirection Harvey 3/faceDirection farmer 1/playMusic none/pause 500/speak Harvey \"Um... @? We've known each other for a while now and... I... er...$11\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"...$11\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 5000/globalFade/viewport -1000 -1000/pause 5000/globalFade/viewport -1000 -1000/pause 2000/speak Harvey \"Whoops... Our time was up half an hour ago. We'd better touch down.$l\"/pause 2000/end dialogue Harvey \"I haven't had such a wonderful day for as long as I can remember.$l\"",
+   }
+},
+
+{	    //Removes harvey railroad event
+	 "Action": "EditData",
+     "Target": "data/events/Railroad",
+     "Entries": {
+	     "528052": null,
+		 "afraid": null,
+		 }
 },
 	
 {	    //PENNY 2 HEART EVENT PATHING FIX

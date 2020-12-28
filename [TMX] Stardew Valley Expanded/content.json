@@ -944,7 +944,11 @@
       "name": "Summit",
       "file": "assets/Maps/Summit.tmx",
       "addLocation": false
-    }
+    },
+	{
+      "name": "GrampletonFields_Small",
+      "file": "assets/Maps/GrampletonFields_Small.tbin"
+    },
 	  ],
 
   "mergeMaps": [
@@ -1320,13 +1324,13 @@
     },*/
 	
 	//MISCELLANEOUS
-	{
+	/*{
       "name": "BusStop",
 	  "file": "assets/MapPatches/BusStop_EndDayWarp.tbin",
       "sourceArea": [ 0, 0, 1, 1 ],
       "position": [ 0, 18 ],
 	  "addWarps": [ "12 7 DayEnd_WarpRoom 3 3" ]
-    },
+    },*/
 	{
       "name": "Backwoods",
       "file": "assets/MapPatches/Backwoods_GraveSite.tbin",

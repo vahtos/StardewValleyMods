@@ -205,7 +205,7 @@
 	  }
 	},
 	
-	 //Fixes an issue where moving the greenhouse caused glithed dirt tiles.
+	 //Fixes an issue where moving the greenhouse caused glitched dirt tiles.
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm_Greenhouse_Dirt",
@@ -388,42 +388,42 @@
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/Minecart_1.tbin",
 	  "ToArea": { "X": 74, "Y": 6, "Width": 6, "Height": 10 },
-	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=Hesper.HotSpringFarmcave": false, "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false, "HasMod |contains=grapefruitcult.slightymoreinterestingfarmcave": false, "HasMod |contains=Froststar11.FairyFarmCave": false }
+	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/Minecart_2.tbin",
 	  "ToArea": { "X": 0, "Y": 22, "Width": 9, "Height": 11 },
-	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=Hesper.HotSpringFarmcave": false, "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false, "HasMod |contains=grapefruitcult.slightymoreinterestingfarmcave": false, "HasMod |contains=Froststar11.FairyFarmCave": false }
+	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	{
       "Action": "EditMap",
-      "Target": "Maps/FarmCave,Maps",
+      "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/Minecart_3.tbin",
-	  "ToArea": { "X": 4, "Y": 0, "Width": 3, "Height": 5 },
-	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=Hesper.HotSpringFarmcave": false, "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false, "HasMod |contains=grapefruitcult.slightymoreinterestingfarmcave": false, "HasMod |contains=Froststar11.FairyFarmCave": false }
+	  "ToArea": { "X": 123, "Y": 89, "Width": 6, "Height": 7 },
+	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 
     {  //Adds light to minecart lanterns
        "Action": "EditMap",
        "Target": "Maps/Farm,Maps",
-       "MapProperties": { "Light": "8 6 4 64 14 4 77 7 4 5 24 4" },
-       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=Hesper.HotSpringFarmcave": false, "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false, "HasMod |contains=grapefruitcult.slightymoreinterestingfarmcave": false, "HasMod |contains=Froststar11.FairyFarmCave": false }
+       "MapProperties": { "Light": "8 6 4 64 14 4 77 7 4 5 24 4 127 91 4" },
+       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
     {  //Adds day time tiles
        "Action": "EditMap",
        "Target": "Maps/Farm,Maps",
-       "MapProperties": { "DayTiles": "Buildings 77 7 510 Buildings 5 24 510" },
-       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=Hesper.HotSpringFarmcave": false, "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false, "HasMod |contains=grapefruitcult.slightymoreinterestingfarmcave": false, "HasMod |contains=Froststar11.FairyFarmCave": false }
+       "MapProperties": { "DayTiles": "Buildings 77 7 510 Buildings 5 24 510 Buildings 127 91 510" },
+       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
     {  //Adds night time tiles
        "Action": "EditMap",
        "Target": "Maps/Farm,Maps",
-       "MapProperties": { "NightTiles": "Buildings 77 7 507 Buildings 5 24 507" },
-       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "HasMod |contains=Hesper.HotSpringFarmcave": false, "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false, "HasMod |contains=grapefruitcult.slightymoreinterestingfarmcave": false, "HasMod |contains=Froststar11.FairyFarmCave": false }
+       "MapProperties": { "NightTiles": "Buildings 77 7 507 Buildings 5 24 507 Buildings 127 91 507" },
+       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
     //bus stop path
