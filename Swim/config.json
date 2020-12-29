@@ -1,6 +1,6 @@
 {
   "EnableMod": true,
-  "ReadyToSwim": true,
+  "ReadyToSwim": false,
   "SwimSuitAlways": false,
   "JumpTimeInMilliseconds": 500,
   "SwimKey": "J",
