@@ -40,7 +40,7 @@
       "Tile": "15, 26",
       "Type": "Item",
       "ID": 49,
-      "DaysUntilExpire": 48,
+      "DaysUntilExpire": 31,
       "SpawnTime": 600,
       "ConfigItem": {
         "Category": "weapon",
@@ -54,7 +54,7 @@
       "Tile": "60, 148",
       "Type": "Item",
       "ID": 15,
-      "DaysUntilExpire": 48,
+      "DaysUntilExpire": 31,
       "SpawnTime": 600,
       "ConfigItem": {
         "Category": "weapon",
@@ -189,17 +189,6 @@
       "Tile": "10, 5",
       "Type": "Forage",
       "ID": 724,
-      "DaysUntilExpire": 0,
-      "SpawnTime": 600,
-      "ConfigItem": null,
-      "MonType": null
-    },
-    {
-      "MapName": "ForestWest",
-      "Name": null,
-      "Tile": "102, 89",
-      "Type": "Forage",
-      "ID": 109,
       "DaysUntilExpire": 0,
       "SpawnTime": 600,
       "ConfigItem": null,
