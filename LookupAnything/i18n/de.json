@@ -7,6 +7,9 @@
     "generic.tomorrow": "morgen",
     "generic.yesterday": "gestern",
 
+    // generic values
+    "generic.unknown": "unknown", // TODO
+
     // generic field values
     "generic.percent": "{{percent}}%",
     "generic.percent-chance-of": "{{percent}}% Chance auf {{label}}",
@@ -189,6 +192,17 @@
     "location.undergroundMine.level": "Minen Level {{level}}",
     "location.witchSwamp": "Hexensumpf",
     "location.woods": "Geheimnisvolle Wälder",
+
+    "location.caldera": "Ginger Island caldera", // TODO
+    "location.islandEast": "Ginger Island east", // TODO
+    "location.islandNorth": "Ginger Island north", // TODO
+    "location.islandSouth": "Ginger Island south", // TODO
+    "location.islandSouthEast": "Ginger Island southeast", // TODO
+    "location.islandSouthEastCave": "Ginger Island southeast cave", // TODO
+    "location.islandWest": "Ginger Island west", // TODO
+    "location.islandWest.fish-area-1": "Ginger Island west (ocean)", // TODO
+    "location.islandWest.fish-area-2": "Ginger Island west (pond)", // TODO
+
     "location.unknown-fish-area": "{{locationName}} (Angelgebiet {{id}})",
 
 
@@ -322,6 +336,8 @@
     // labels
     "crop.summary": "Saat",
     "crop.harvest": "Ernte",
+    "crop.fertilized": "Fertilized", // TODO
+    "crop.watered": "Watered", // TODO
 
     // values
     "crop.summary.dead": "Diese Saat ist tot.",
@@ -588,7 +604,7 @@
 
 
     /*********
-    ** Tile lookups > Fern Islands mermaid puzzle
+    ** Puzzles > Fern Islands mermaid puzzle
     *********/
     // labels
     // TODO
@@ -617,6 +633,7 @@
     *********/
     // labels
     "tile.description": "Kachel-Informationen. Dies wird angezeigt, weil du \"tile lookups\" in den Konfiguration angeschaltet hast.",
+    "tile.game-location": "Location", // TODO
     "tile.map-name": "Kartenname",
     "tile.tile": "Kachel",
     "tile.tile-index": "{{layerName}}: Kachelindex",
@@ -659,7 +676,6 @@
     "tree.next-growth.winter": "Kann nicht im Winter außerhalb des Gewächshauses wachsen.",
     "tree.next-growth.adjacent-trees": "Kann nicht wachsen, weil andere Bäume zu nah sind.",
     "tree.next-growth.chance": "{{chance}}% Chance in das nächste Stadium zu kommen. Im nächstem Stadium wird es ein {{stage}} sein.",
-    "tree.is-fertilized.effects": "garantiertes tägliches Wachstum, auch im Winter",
 
     // growth stages
     "tree.stages.seed": "Samen",

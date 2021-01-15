@@ -35,26 +35,12 @@
       "MonType": null
     },
     {
-      "MapName": "Railroad",
-      "Name": "weapon:Rapier",
-      "Tile": "15, 26",
-      "Type": "Item",
-      "ID": 49,
-      "DaysUntilExpire": 31,
-      "SpawnTime": 600,
-      "ConfigItem": {
-        "Category": "weapon",
-        "Name": "Rapier"
-      },
-      "MonType": null
-    },
-    {
       "MapName": "ForestWest",
       "Name": "weapon:Forest Sword",
       "Tile": "60, 148",
       "Type": "Item",
       "ID": 15,
-      "DaysUntilExpire": 31,
+      "DaysUntilExpire": 9,
       "SpawnTime": 600,
       "ConfigItem": {
         "Category": "weapon",
@@ -233,17 +219,6 @@
       "Tile": "22, 76",
       "Type": "Forage",
       "ID": 104,
-      "DaysUntilExpire": 0,
-      "SpawnTime": 600,
-      "ConfigItem": null,
-      "MonType": null
-    },
-    {
-      "MapName": "Summit",
-      "Name": null,
-      "Tile": "21, 25",
-      "Type": "Forage",
-      "ID": 109,
       "DaysUntilExpire": 0,
       "SpawnTime": 600,
       "ConfigItem": null,

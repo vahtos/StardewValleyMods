@@ -205,12 +205,19 @@
 	  }
 	},
 	
-	 //Fixes an issue where moving the greenhouse caused glitched dirt tiles.
+	//Greenhouse tiles
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm_Greenhouse_Dirt",
-      "FromFile": "assets/MapPatches/Farm_Greenhouse_Dirt.tmx",
-      "When": { "FarmType":"Standard", "HasMod |contains=flashshifter.GrandpasFarm": false },
+      "FromFile": "assets/MapPatches/Farm_Greenhouse_Grass_IF2R.tmx",
+      "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "Farm_Sandbox_Layout": "false" },
+	  "ToArea": { "X": 0, "Y": 0, "Width": 9, "Height": 6 },
+    }, 
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_Greenhouse_Dirt",
+      "FromFile": "assets/MapPatches/Farm_Greenhouse_Dirt_IF2R.tmx",
+      "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false, "Farm_Sandbox_Layout": "true" },
 	  "ToArea": { "X": 0, "Y": 0, "Width": 9, "Height": 6 },
     }, 
 
@@ -338,7 +345,15 @@
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/RemoveTableFromBackyard.tbin",
 	  "ToArea": { "X": 45, "Y": 6, "Width": 3, "Height": 4 },
-	  "When": { "Remove_Table_From_Backyard": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+	  "When": { "Remove_Table_From_Backyard": "true", "Farm_Sandbox_Layout": "false", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/RemoveTableFromBackyard_Sandbox.tbin",
+	  "ToArea": { "X": 45, "Y": 6, "Width": 3, "Height": 4 },
+	  "When": { "Remove_Table_From_Backyard": "true", "Farm_Sandbox_Layout": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
 	{
