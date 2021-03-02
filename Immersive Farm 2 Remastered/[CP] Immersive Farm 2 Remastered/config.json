@@ -1,4 +1,5 @@
 {
+  "Mist_Effects": "true",
   "Farm_Sandbox_Layout": "false",
   "Farm_Light_Debris": "false",
   "Dirt_Crop_Field_1": "false",
@@ -15,7 +16,7 @@
   "Remove_Fences_From_Backyard": "false",
   "Remove_Pet_House_From_Backyard": "false",
   "Remove_Flowerbed_From_Backyard": "false",
-  "Minecart_System": "false",
+  "Remove_Minecart_System": "false",
   "Remove_Objects_From_Greenhouse": "false",
   "Disable_IF2R_Greenhouse": "false"
 }

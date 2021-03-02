@@ -19,6 +19,18 @@
 		"Loop": true,
 		"Preload": true
 	},
+	{   //vanilla fireplace sound effect
+		"Id": "SDV_Fireplace",
+		"File": "SDV_Fireplace.wav",
+		"Loop": true,
+		"Preload": true
+	},
+    {   //camilla's tower
+		"Id": "CamillasTower",
+		"File": "CamillasTower.wav",
+		"Loop": true,
+		"Preload": true
+	},
 	{   //sad theme
 		"Id": "Lament",
 		"File": "Lament.wav",

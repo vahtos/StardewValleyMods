@@ -40,7 +40,7 @@
       "Tile": "60, 148",
       "Type": "Item",
       "ID": 15,
-      "DaysUntilExpire": 9,
+      "DaysUntilExpire": 7,
       "SpawnTime": 600,
       "ConfigItem": {
         "Category": "weapon",
