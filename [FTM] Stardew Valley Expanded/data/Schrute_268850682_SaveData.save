@@ -1,5 +1,5 @@
 {
-  "WeatherForYesterday": "Sunny",
+  "WeatherForYesterday": "Lightning",
   "LNOSCounter": {
     "Beach forage area 3": 1,
     "Summit forage area 2": 1,
@@ -32,20 +32,6 @@
       "DaysUntilExpire": 0,
       "SpawnTime": 600,
       "ConfigItem": null,
-      "MonType": null
-    },
-    {
-      "MapName": "ForestWest",
-      "Name": "weapon:Forest Sword",
-      "Tile": "60, 148",
-      "Type": "Item",
-      "ID": 15,
-      "DaysUntilExpire": 7,
-      "SpawnTime": 600,
-      "ConfigItem": {
-        "Category": "weapon",
-        "Name": "Forest Sword"
-      },
       "MonType": null
     },
     {
