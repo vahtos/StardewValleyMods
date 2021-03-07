@@ -96,19 +96,32 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Stone",
       "Tile": "20, 143",
       "Type": "Ore",
       "ID": 668,
       "DaysUntilExpire": 1,
+=======
+      "Name": null,
+      "Tile": "79, 99",
+      "Type": "LargeObject",
+      "ID": 276,
+      "DaysUntilExpire": 12,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "SpawnTime": 600,
       "ConfigItem": null,
       "MonType": null
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Iron",
       "Tile": "38, 147",
+=======
+      "Name": "Stone",
+      "Tile": "20, 143",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 290,
       "DaysUntilExpire": 1,
@@ -118,6 +131,7 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Stone",
       "Tile": "41, 153",
       "Type": "Ore",
@@ -133,6 +147,12 @@
       "Tile": "45, 142",
       "Type": "Ore",
       "ID": 751,
+=======
+      "Name": "Iron",
+      "Tile": "38, 147",
+      "Type": "Ore",
+      "ID": 290,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "DaysUntilExpire": 1,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -140,8 +160,47 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Copper",
       "Tile": "44, 149",
+      "Type": "Ore",
+      "ID": 751,
+=======
+      "Name": "Stone",
+      "Tile": "41, 153",
+      "Type": "Ore",
+      "ID": 670,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Farm",
+<<<<<<< HEAD
+      "Name": "Stone",
+      "Tile": "19, 144",
+=======
+      "Name": "Copper",
+      "Tile": "45, 142",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Farm",
+<<<<<<< HEAD
+      "Name": "Stone",
+      "Tile": "41, 152",
+=======
+      "Name": "Copper",
+      "Tile": "44, 149",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 751,
       "DaysUntilExpire": 1,
@@ -152,29 +211,11 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
-      "Tile": "19, 144",
-      "Type": "Ore",
-      "ID": 670,
-      "DaysUntilExpire": 1,
-      "SpawnTime": 600,
-      "ConfigItem": null,
-      "MonType": null
-    },
-    {
-      "MapName": "Farm",
-      "Name": "Stone",
-      "Tile": "41, 152",
-      "Type": "Ore",
-      "ID": 668,
-      "DaysUntilExpire": 1,
-      "SpawnTime": 600,
-      "ConfigItem": null,
-      "MonType": null
-    },
-    {
-      "MapName": "Farm",
-      "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "37, 143",
+=======
+      "Tile": "19, 144",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 670,
       "DaysUntilExpire": 1,
@@ -185,7 +226,11 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "40, 148",
+=======
+      "Tile": "41, 152",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 668,
       "DaysUntilExpire": 1,
@@ -195,11 +240,19 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Copper",
       "Tile": "45, 152",
       "Type": "Ore",
       "ID": 751,
       "DaysUntilExpire": 2,
+=======
+      "Name": "Stone",
+      "Tile": "37, 143",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "SpawnTime": 600,
       "ConfigItem": null,
       "MonType": null
@@ -207,7 +260,11 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "25, 143",
+=======
+      "Tile": "40, 148",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 668,
       "DaysUntilExpire": 2,
@@ -217,10 +274,17 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Stone",
       "Tile": "17, 140",
       "Type": "Ore",
       "ID": 668,
+=======
+      "Name": "Copper",
+      "Tile": "45, 152",
+      "Type": "Ore",
+      "ID": 751,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "DaysUntilExpire": 2,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -228,6 +292,43 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
+      "Name": "Iron",
+      "Tile": "41, 144",
+      "Type": "Ore",
+      "ID": 290,
+=======
+      "Name": "Stone",
+      "Tile": "25, 143",
+      "Type": "Ore",
+      "ID": 668,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Farm",
+      "Name": "Stone",
+<<<<<<< HEAD
+      "Tile": "39, 149",
+=======
+      "Tile": "17, 140",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Farm",
+<<<<<<< HEAD
+      "Name": "Stone",
+      "Tile": "29, 146",
+=======
       "Name": "Iron",
       "Tile": "41, 144",
       "Type": "Ore",
@@ -241,6 +342,7 @@
       "MapName": "Farm",
       "Name": "Stone",
       "Tile": "39, 149",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 668,
       "DaysUntilExpire": 2,
@@ -251,18 +353,11 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
-      "Tile": "29, 146",
-      "Type": "Ore",
-      "ID": 670,
-      "DaysUntilExpire": 2,
-      "SpawnTime": 600,
-      "ConfigItem": null,
-      "MonType": null
-    },
-    {
-      "MapName": "Farm",
-      "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "38, 144",
+=======
+      "Tile": "29, 146",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 670,
       "DaysUntilExpire": 2,
@@ -272,8 +367,13 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Geode",
       "Tile": "44, 142",
+=======
+      "Name": "Stone",
+      "Tile": "38, 144",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 75,
       "DaysUntilExpire": 3,
@@ -283,8 +383,13 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Gem",
       "Tile": "34, 145",
+=======
+      "Name": "Stone",
+      "Tile": "39, 140",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 12,
       "DaysUntilExpire": 3,
@@ -294,10 +399,17 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Stone",
       "Tile": "49, 145",
       "Type": "Ore",
       "ID": 670,
+=======
+      "Name": "Geode",
+      "Tile": "39, 148",
+      "Type": "Ore",
+      "ID": 75,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "DaysUntilExpire": 3,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -305,10 +417,17 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Stone",
       "Tile": "48, 148",
       "Type": "Ore",
       "ID": 668,
+=======
+      "Name": "Geode",
+      "Tile": "25, 140",
+      "Type": "Ore",
+      "ID": 75,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "DaysUntilExpire": 3,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -317,7 +436,11 @@
     {
       "MapName": "Farm",
       "Name": "Copper",
+<<<<<<< HEAD
       "Tile": "28, 149",
+=======
+      "Tile": "31, 140",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 751,
       "DaysUntilExpire": 3,
@@ -327,8 +450,13 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Geode",
       "Tile": "43, 152",
+=======
+      "Name": "Copper",
+      "Tile": "18, 144",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 75,
       "DaysUntilExpire": 3,
@@ -339,7 +467,11 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "27, 147",
+=======
+      "Tile": "25, 145",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 670,
       "DaysUntilExpire": 3,
@@ -350,9 +482,13 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "32, 149",
+=======
+      "Tile": "42, 147",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
-      "ID": 668,
+      "ID": 670,
       "DaysUntilExpire": 3,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -360,8 +496,13 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Geode",
       "Tile": "38, 148",
+=======
+      "Name": "Stone",
+      "Tile": "33, 153",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 75,
       "DaysUntilExpire": 3,
@@ -371,10 +512,10 @@
     },
     {
       "MapName": "Farm",
-      "Name": "Stone",
-      "Tile": "20, 140",
+      "Name": "Copper",
+      "Tile": "41, 147",
       "Type": "Ore",
-      "ID": 668,
+      "ID": 751,
       "DaysUntilExpire": 3,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -382,10 +523,32 @@
     },
     {
       "MapName": "Farm",
+      "Name": "Stone",
+<<<<<<< HEAD
+      "Tile": "20, 140",
+=======
+      "Tile": "37, 142",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 3,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Stone",
       "Tile": "40, 143",
       "Type": "Ore",
       "ID": 668,
+=======
+      "Name": "Iron",
+      "Tile": "30, 152",
+      "Type": "Ore",
+      "ID": 290,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "DaysUntilExpire": 4,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -394,7 +557,22 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "41, 151",
+=======
+      "Tile": "38, 150",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 4,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Farm",
+      "Name": "Stone",
+      "Tile": "34, 153",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 668,
       "DaysUntilExpire": 4,
@@ -405,7 +583,11 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "32, 139",
+=======
+      "Tile": "26, 142",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 670,
       "DaysUntilExpire": 4,
@@ -415,10 +597,17 @@
     },
     {
       "MapName": "Farm",
+<<<<<<< HEAD
       "Name": "Copper",
       "Tile": "30, 149",
       "Type": "Ore",
       "ID": 751,
+=======
+      "Name": "Geode",
+      "Tile": "25, 148",
+      "Type": "Ore",
+      "ID": 75,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "DaysUntilExpire": 4,
       "SpawnTime": 600,
       "ConfigItem": null,
@@ -427,7 +616,11 @@
     {
       "MapName": "Farm",
       "Name": "Copper",
+<<<<<<< HEAD
       "Tile": "35, 153",
+=======
+      "Tile": "38, 140",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 751,
       "DaysUntilExpire": 4,
@@ -438,7 +631,11 @@
     {
       "MapName": "Farm",
       "Name": "Copper",
+<<<<<<< HEAD
       "Tile": "36, 150",
+=======
+      "Tile": "40, 146",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
       "ID": 751,
       "DaysUntilExpire": 4,
@@ -449,32 +646,53 @@
     {
       "MapName": "Farm",
       "Name": "Stone",
+<<<<<<< HEAD
       "Tile": "36, 147",
+=======
+      "Tile": "27, 149",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Ore",
-      "ID": 670,
+      "ID": 668,
       "DaysUntilExpire": 4,
       "SpawnTime": 600,
       "ConfigItem": null,
       "MonType": null
     },
     {
+<<<<<<< HEAD
       "MapName": "Farm",
       "Name": "Iron",
       "Tile": "19, 142",
       "Type": "Ore",
       "ID": 290,
       "DaysUntilExpire": 4,
+=======
+      "MapName": "DeepCave",
+      "Name": null,
+      "Tile": "16, 30",
+      "Type": "Forage",
+      "ID": 567,
+      "DaysUntilExpire": 1,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "SpawnTime": 600,
       "ConfigItem": null,
       "MonType": null
     },
     {
+<<<<<<< HEAD
       "MapName": "Farm",
       "Name": "Stone",
       "Tile": "25, 144",
       "Type": "Ore",
       "ID": 668,
       "DaysUntilExpire": 4,
+=======
+      "MapName": "DeepCave",
+      "Name": null,
+      "Tile": "34, 21",
+      "Type": "Forage",
+      "ID": 541,
+      "DaysUntilExpire": 1,
       "SpawnTime": 600,
       "ConfigItem": null,
       "MonType": null
@@ -482,7 +700,23 @@
     {
       "MapName": "DeepCave",
       "Name": null,
+      "Tile": "16, 31",
+      "Type": "Forage",
+      "ID": 571,
+      "DaysUntilExpire": 1,
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "DeepCave",
+      "Name": null,
+<<<<<<< HEAD
       "Tile": "43, 34",
+=======
+      "Tile": "42, 34",
+>>>>>>> 6193c45a8b2fbbfb53ee51d77a2f72b3a0f8a3bf
       "Type": "Forage",
       "ID": 535,
       "DaysUntilExpire": 1,
