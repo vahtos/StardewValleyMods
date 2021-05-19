@@ -1,5 +1,5 @@
 {
-  "Format": "1.19",
+  "Format": "1.21",
 
    "ConfigSchema": {
 
@@ -105,14 +105,28 @@
    
 },
 
+
+  "CustomLocations": [
+  {
+    "Name": "Custom_DeepCave",
+    "FromMapFile": "Assets/NewLocations/DeepCave.tbin",
+    "MigrateLegacyNames": [ "DeepCave" ]
+  },
+  {
+    "Name": "Custom_MinecartCave",
+    "FromMapFile": "Assets/NewLocations/MinecartCave.tbin",
+    "MigrateLegacyNames": [ "MinecartCave" ]
+  },
+],
+
+
   "Changes": [ 
 
       //Load tilesheets  
     {
       "Action": "Load",
-      "Target": "Maps/Mine_Inverted, Maps/Farm_Shadow, Maps/z_petbowl",
+      "Target": "Maps/z_MineCartCaveShadows, Maps/CavernObjects, Maps/Mine_Inverted, Maps/Farm_Shadow, Maps/z_petbowl",
       "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
-	  "When": { "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
     { //mist tilesheets

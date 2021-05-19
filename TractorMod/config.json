@@ -1,15 +1,15 @@
 {
   "Distance": 1,
-  "TractorSpeed": 0,
-  "MagneticRadius": 500,
-  "BuildPrice": 500000,
+  "TractorSpeed": -2,
+  "MagneticRadius": 384,
+  "BuildPrice": 150000,
   "BuildMaterials": {
     "335": 20,
     "337": 5,
     "787": 5
   },
   "CanSummonWithoutGarage": false,
-  "HighlightRadius": true,
+  "HighlightRadius": false,
   "StandardAttachments": {
     "Axe": {
       "ClearFruitTreeSeeds": false,
@@ -40,10 +40,21 @@
     "MilkPail": {
       "Enable": true
     },
-    "MeleeWeapon": {
-      "AttackMonsters": true,
-      "ClearDeadCrops": true,
+    "MeleeBlunt": {
+      "AttackMonsters": false,
       "BreakMineContainers": true
+    },
+    "MeleeDagger": {
+      "AttackMonsters": false,
+      "ClearDeadCrops": true,
+      "BreakMineContainers": true,
+      "HarvestGrass": false
+    },
+    "MeleeSword": {
+      "AttackMonsters": false,
+      "ClearDeadCrops": true,
+      "BreakMineContainers": true,
+      "HarvestGrass": false
     },
     "PickAxe": {
       "ClearDebris": true,
@@ -74,7 +85,7 @@
       "Enable": true
     },
     "Slingshot": {
-      "Enable": true
+      "Enable": false
     },
     "WateringCan": {
       "Enable": true
